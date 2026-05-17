@@ -220,7 +220,6 @@ Accepts a base64 encoded plant image and returns the top 3 species matches.
 
 4. **Image URL Storage** — When a user uploads a photo for identification, the image is stored as a temporary browser object URL. This URL does not persist after the browser session ends, so plant cards will show a placeholder emoji instead of the photo on subsequent visits.
 
-5. **Database Inconsistency** - Current database might have some inconsistency 
 ---
 
 ## Future Development Roadmap
