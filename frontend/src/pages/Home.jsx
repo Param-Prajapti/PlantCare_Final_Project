@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(function () {
         async function loadPlants() {
-            await fetch('http://localhost:3000/api/plants')
+            await fetch('https://plant-care-final-project.vercel.app/api/plants')
                 .then(function (res) { return res.json(); })
                 .then(function (data) {
                     setPlants(data);
@@ -35,7 +35,7 @@ function Home() {
     }, []);
 
     async function fetchPlantDetails(perenualId) {
-        await fetch('http://localhost:3000/api/search/details/' + perenualId)
+        await fetch('https://plant-care-final-project.vercel.app/api/search/details/' + perenualId)
             .then(function (res) { return res.json(); })
             .then(function (details) {
                 const hasWatering = details.watering && !details.watering.includes('Upgrade');
@@ -51,7 +51,7 @@ function Home() {
     }
 
     async function handleWateredChange(plantId, newDate) {
-        await fetch('http://localhost:3000/api/plants/' + plantId, {
+        await fetch('https://plant-care-final-project.vercel.app/api/plants/' + plantId, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ last_watered: newDate })

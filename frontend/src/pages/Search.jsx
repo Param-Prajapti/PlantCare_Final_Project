@@ -18,7 +18,7 @@ function Search() {
         setSearchResults([]);
         setSelectedPlant(null);
 
-        await fetch('http://localhost:3000/api/search?name=' + searchName)
+        await fetch('https://plant-care-final-project.vercel.app/api/search?name=' + searchName)
             .then(function (res) { return res.json(); })
             .then(function (data) {
                 setSearchResults(data.data || []);
@@ -52,7 +52,7 @@ function Search() {
         reader.onloadend = async function () {
             var base64 = reader.result;
 
-            await fetch('http://localhost:3000/api/identify', {
+            await fetch('https://plant-care-final-project.vercel.app/api/identify', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ imageBase64: base64, mimeType: imageFile.type })
@@ -80,7 +80,7 @@ function Search() {
         setSelectedPlant(plant);
         setPlantDetails(null);
 
-        await fetch('http://localhost:3000/api/search/details/' + plant.id)
+        await fetch('https://plant-care-final-project.vercel.app/api/search/details/' + plant.id)
             .then(function (res) { return res.json(); })
             .then(function (details) {
                 var hasWatering = details.watering && !details.watering.includes('Upgrade');
@@ -101,7 +101,7 @@ function Search() {
         const genus = match.species.split(' ')[0];
         setSearchName(genus);
 
-        await fetch('http://localhost:3000/api/search?name=' + genus)
+        await fetch('https://plant-care-final-project.vercel.app/api/search?name=' + genus)
             .then(function (res) { return res.json(); })
             .then(function (data) {
                 var results = data.data || [];
@@ -130,7 +130,7 @@ function Search() {
             var plant = results[index];
             index++;
 
-            await fetch('http://localhost:3000/api/search/details/' + plant.id)
+            await fetch('https://plant-care-final-project.vercel.app/api/search/details/' + plant.id)
                 .then(function (res) { return res.json(); })
                 .then(function (details) {
                     const hasWatering = details.watering && !details.watering.includes('Upgrade');
@@ -160,7 +160,7 @@ function Search() {
             care_level: plantDetails ? plantDetails.care_level : 'Medium'
         };
 
-        await fetch('http://localhost:3000/api/plants', {
+        await fetch('https://plant-care-final-project.vercel.app/api/plants', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(plantToAdd)
