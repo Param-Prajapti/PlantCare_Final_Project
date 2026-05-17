@@ -66,6 +66,24 @@ Create a `.env` file inside the `/backend` folder
 3. Disable Row Level Security (RLS) on the table
 4. Copy your Project URL and anon public key into your `.env` file
 
+### Files containing app code
+
+plantcare/
+|---backend/
+|-----index.js
+|---frontend/
+|-----src/
+|-------pages/
+|----------About.jsx
+|----------Home.jsx
+|----------Search.jsx
+|-------App.css
+|-------App.jsx
+|-------main.jsx
+|---docs/
+└-----README.md
+
+
 ---
 
 ## Running the Application
