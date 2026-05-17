@@ -1,5 +1,11 @@
 # PlantCare Developer Manual
 
+## Vercel Link
+plant-care-final-project-89oi.vercel.app
+
+## Disclaimer
+This app is working with limited API calls and limited data
+
 ## Audience
 This document is for future developers who will be taking over the PlantCare system.
 
