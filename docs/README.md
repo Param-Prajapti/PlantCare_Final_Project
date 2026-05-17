@@ -68,20 +68,20 @@ Create a `.env` file inside the `/backend` folder
 
 ### Files containing app code
 
-plantcare/
-|---backend/
-|-----index.js
-|---frontend/
-|-----src/
-|-------pages/
-|----------About.jsx
-|----------Home.jsx
-|----------Search.jsx
-|-------App.css
-|-------App.jsx
-|-------main.jsx
-|---docs/
-└-----README.md
+- plantcare/
+-  backend/
+-    index.js
+-  frontend/
+-    src/
+-      pages/
+-        About.jsx
+-        Home.jsx
+-        Search.jsx
+-      App.css
+-      App.jsx
+-      main.jsx
+-  docs/
+-    README.md
 
 
 ---
